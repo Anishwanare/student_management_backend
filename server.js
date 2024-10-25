@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5000
 app.use(express.json());
 app.use(urlencoded({ extended: true })); // This is useful if you are handling URL-encoded data
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "http://localhost:5173" || process.env.FRONTEND_URL,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true
 }));
